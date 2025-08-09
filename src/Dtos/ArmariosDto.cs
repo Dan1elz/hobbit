@@ -8,13 +8,13 @@ public class ArmariosDto
     public class CreateArmarioDto
     {
         [Required(ErrorMessage = "O ambiente é obrigatório.")]
-        public Guid AmbienteId { get; private set; }
+        public Guid AmbienteId { get; set; }
 
         [Required(ErrorMessage = "O NI é obrigatório."), StringLength(50, ErrorMessage = "O NI deve ter no máximo 50 caracteres.")]
-        public string Ni { get; private set; } = string.Empty;
+        public string Ni { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "O tipo de armário é obrigatório."), EnumDataType(typeof(TipoArmarioEnum), ErrorMessage = "Tipo de armário inválido.")]
-        public TipoArmarioEnum TipoArmario { get; private set; }
+        public TipoArmarioEnum TipoArmario { get; set; }
 
         public CreateArmarioDto() { }
         public CreateArmarioDto(Armarios model)
@@ -33,7 +33,7 @@ public class ArmariosDto
 
     public class ResponseArmarioDto : CreateArmarioDto
     {
-        public Guid Id { get; private set; }
+        public Guid Id { get; set; }
 
         public ResponseArmarioDto() { }
         public ResponseArmarioDto(Armarios model) : base(model)

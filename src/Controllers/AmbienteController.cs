@@ -4,6 +4,8 @@ using static Hobbit.src.Dtos.AmbientesDto;
 
 namespace Hobbit.src.Controllers;
 
+
+// Aobaa!
 [Route("api/[controller]")]
 [ApiController]
 public class AmbienteController(AmbientesService service) : ControllerBase

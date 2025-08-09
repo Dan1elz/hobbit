@@ -7,6 +7,7 @@ public class ArmariosDto
 {
     public class CreateArmarioDto
     {
+        //Adoleta
         [Required(ErrorMessage = "O ambiente é obrigatório.")]
         public Guid AmbienteId { get; set; }
 

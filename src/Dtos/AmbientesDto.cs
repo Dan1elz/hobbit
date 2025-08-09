@@ -6,6 +6,7 @@ public class AmbientesDto
 {
     public class CreateAmbienteDto
     {
+        //Adoleta 2
         [Required(ErrorMessage = "O código é obrigatório."), StringLength(32, ErrorMessage = "O código deve ter no máximo 32 caracteres.")]
         public string Codigo { get; set; } = string.Empty;
 
